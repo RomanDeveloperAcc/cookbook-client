@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+$main-font: 'Montserrat';
+
+.main-wrapper {
+  font-family: $main-font;
+  margin: 3rem 20rem;
+
+  .text-right {
+    text-align: right;
+  }
+
+  .info-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+
+    .pizza-img {
+      heigth: 15rem;
+      width: 20rem;
+    }
+
+    .food-img {
+      height: 15rem;
+      width: 15rem;
+    }
+
+    .info-element-text {
+      width: 32rem;
+
+      .info-text-title {
+        color: #180739;
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+      }
+
+      .info-text-subtitle {
+        opacity: 0.7;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

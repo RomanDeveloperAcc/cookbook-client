@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
+  public foodImg = {
+    pizza: 'assets/img/about-page/pizza.jpg',
+    food: 'assets/img/about-page/food.jpg'
+  }
   constructor() { }
 
   ngOnInit(): void {
