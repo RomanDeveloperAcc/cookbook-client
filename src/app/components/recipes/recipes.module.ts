@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RecipesItemComponent } from './recipes-item/recipes-item.component';
 import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { RecipesComponent } from './recipes.component';
-import {RecipesRoutingModule} from "./recipes-routing.module";
+import { RecipesRoutingModule } from './recipes-routing.module';
+import { RecipesService } from '../../services/recipes/recipes.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import {RecipesRoutingModule} from "./recipes-routing.module";
     CommonModule,
     RecipesRoutingModule
   ],
-  providers: [],
+  providers: [RecipesService],
   exports: [
     RecipesComponent,
     RecipesItemComponent,

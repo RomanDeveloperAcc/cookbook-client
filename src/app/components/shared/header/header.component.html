@@ -20,7 +20,10 @@
         >
           Recipes
         </div>
-        <div class="nav-item">
+        <div class="nav-item"
+             [routerLink]="['/about']"
+             routerLinkActive="active-link"
+             [routerLinkActiveOptions]="{ exact: true }">
           About
         </div>
       </nav>
