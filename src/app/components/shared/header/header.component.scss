@@ -20,6 +20,8 @@ header {
   .logo {
     display: flex;
     align-items: center;
+    cursor: pointer;
+    outline: none;
 
     .header-img {
       height: 3rem;
@@ -38,5 +40,7 @@ header {
 
   .nav-item {
     margin-left: 5rem;
+    outline: none;
+    cursor: pointer;
   }
 }

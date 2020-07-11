@@ -12,6 +12,10 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'recipes',
+    loadChildren: () => import('./components/recipes/recipes.module').then(mod => mod.RecipesModule)
   }
 ];
 
