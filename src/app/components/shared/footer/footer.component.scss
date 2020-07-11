@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+$main-font: 'Roboto';
+
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  background-color: #5211d1;
+  color: #fff;
+  font-family: $main-font;
+  padding: 1rem;
+}
