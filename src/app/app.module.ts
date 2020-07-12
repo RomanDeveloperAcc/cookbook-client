@@ -8,6 +8,7 @@ import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { RecipesModule } from './components/recipes/recipes.module';
 import { AboutComponent } from './components/about-page/about/about.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AboutComponent } from './components/about-page/about/about.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RecipesModule
+    RecipesModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
