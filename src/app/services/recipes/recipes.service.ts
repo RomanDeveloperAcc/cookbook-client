@@ -20,6 +20,10 @@ export class RecipesService {
     return this.http.get<RecipeModel[]>(`${this.backEndUrl}/recipes`);
   }
 
+  public getNewestRecipes(): Observable<RecipeModel[]> {
+    return this.http.get<RecipeModel[]>(`${this.backEndUrl}/recipes/new`);
+  }
+
   public getOneRecipe(id: number): Observable<RecipeModel> {
     return this.http.get<RecipeModel>(`${this.backEndUrl}/recipes/${id}`);
   }

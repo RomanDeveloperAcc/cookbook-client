@@ -1,3 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+$main-font: 'Montserrat';
+
 .main-wrapper {
-  margin: 0 auto;
+  margin: 0 20rem;
+  font-family: $main-font;
+
+  .main-text {
+    text-align: center;
+
+    .main-text-title {
+      font-size: 2rem;
+      color: #180739;
+    }
+
+    .main-text-subtitle {
+      font-size: 2.65rem;
+      opacity: 0.7;
+      margin-bottom: 3rem;
+    }
+  }
+
+  .recipes-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    height: 22rem;
+
+    .three-last-recipes {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .no-recipes-text {
+      text-align: center;
+      opacity: 0.5;
+      font-size: 2.5rem;
+    }
+  }
 }

@@ -1,5 +1,7 @@
 <div class="main-wrapper">
-  <button class="create-recipe-btn">
+  <button class="create-recipe-btn"
+          [routerLink]="['create-recipe']"
+  >
     Create new recipe
   </button>
   <app-recipes-item *ngFor="let recipe of recipes"

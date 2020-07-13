@@ -1,1 +1,25 @@
-<div class="main-wrapper"></div>
+<div class="main-wrapper">
+  <div class="main-text">
+    <div class="main-text-title">
+      <h1>Welcome!</h1>
+    </div>
+    <div class="main-text-subtitle">
+      Check out our recipes:
+    </div>
+  </div>
+  <div class="recipes-content">
+    <div class="three-last-recipes"
+         *ngIf="newRecipes[0]"
+    >
+      <app-recipes-item *ngFor="let recipe of newRecipes"
+                        [recipeItem]="recipe"
+                        [home]="true"
+      ></app-recipes-item>
+    </div>
+    <div class="no-recipes-text"
+         *ngIf="!newRecipes[0]"
+    >
+      Sorry, there are no recipes :(
+    </div>
+  </div>
+</div>
