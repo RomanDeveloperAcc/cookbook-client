@@ -1,3 +1,20 @@
 .main-wrapper {
   margin: 0 25rem;
 }
+
+.create-recipe-btn {
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  background-color: #5211d1;
+  width: 100%;
+  border: 1px solid #5211d1;
+  border-radius: 2rem;
+  outline: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #6221de;
+  }
+}
