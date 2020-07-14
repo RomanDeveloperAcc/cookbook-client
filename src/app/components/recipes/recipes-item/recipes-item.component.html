@@ -1,13 +1,19 @@
 <div class="main-wrapper"
      [class.at-home]="home"
 >
-  <div class="recipe-title">
-    {{ recipeItem.title | readMore }}
+  <div class="text-content">
+    <div class="recipe-title">
+      {{ recipeItem.title | readMore }}
+    </div>
+    <div class="recipe-text">
+      {{ recipeItem.description | readMore}}
+    </div>
+    <div class="recipe-date">
+      {{ recipeItem.creationDate | date }}
+    </div>
   </div>
-  <div class="recipe-text">
-    {{ recipeItem.description | readMore}}
-  </div>
-  <div class="recipe-date">
-    {{ recipeItem.creationDate | date }}
+  <div class="btn-content">
+    <button class="update-btn cta-btn">Update</button>
+    <button class="delete-btn cta-btn">Delete</button>
   </div>
 </div>

@@ -8,6 +8,8 @@ $main-font: 'Open Sans';
   border-radius: 4px;
   margin-bottom: 2rem;
   padding: 1rem;
+  display: flex;
+  justify-content: space-between;
 
   .recipe-title {
     color: #180739;
@@ -22,13 +24,41 @@ $main-font: 'Open Sans';
     margin-bottom: 1rem;
     word-break: break-word;
   }
+
+  .btn-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 0;
+
+    .cta-btn {
+      font-size: 1rem;
+      border: none;
+    }
+
+    .update-btn {
+      background-color: #bd9210;
+
+      &:hover {
+        background-color: #d4a514;
+      }
+    }
+
+    .delete-btn {
+      background-color: #6f0808;
+
+      &:hover {
+        background-color: #8b0a0a;
+      }
+    }
+  }
 }
 
 .at-home {
   width: 15rem;
   height: 20rem;
 
-  .recipe-date {
+  .recipe-date, .btn-content {
     display: none;
   }
 }
