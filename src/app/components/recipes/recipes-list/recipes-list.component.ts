@@ -19,5 +19,4 @@ export class RecipesListComponent implements OnInit {
     this.recipesService.getRecipes()
       .subscribe(data => this.recipes = data);
   }
-
 }

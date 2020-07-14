@@ -35,4 +35,8 @@ export class RecipesItemComponent implements OnInit {
         this.router.navigate(['/recipes']);
       });
   }
+
+  public goToSingleView(): void {
+    this.router.navigate([`/recipes/${this.recipeItem.recipeId}`]);
+  }
 }

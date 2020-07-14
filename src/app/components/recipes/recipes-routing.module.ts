@@ -4,6 +4,7 @@ import { RecipesItemComponent } from './recipes-item/recipes-item.component';
 import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { RecipesComponent } from './recipes.component';
 import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
+import { RecipesSingleViewComponent } from './recipes-single-view/recipes-single-view.component';
 
 const recipesRoutes: Routes = [
   {
@@ -20,7 +21,7 @@ const recipesRoutes: Routes = [
       },
       {
         path: ':id',
-        component: RecipesItemComponent
+        component: RecipesSingleViewComponent
       },
       {
         path: '',

@@ -1,0 +1,13 @@
+<div class="main-wrapper">
+  <div class="text-content">
+    <div class="recipe-title">
+      {{ recipeItem.title | readMore }}
+    </div>
+    <div class="recipe-text">
+      {{ recipeItem.description | readMore}}
+    </div>
+    <div class="recipe-date">
+      {{ recipeItem.creationDate | date }}
+    </div>
+  </div>
+</div>

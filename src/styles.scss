@@ -13,21 +13,21 @@ h2 {
 .cta-btn {
   padding: 0.5rem;
   color: #fff;
-  background-color: #5211d1;
+  background-color: #19790c;
   width: 100%;
-  border: 1px solid #5211d1;
+  border: 1px solid #19790c;
   border-radius: 2rem;
   outline: none;
   font-size: 1.25rem;
   cursor: pointer;
 
   &:hover {
-    background-color: #6221de;
+    background-color: #1f9510;
   }
 
   &:disabled {
-    background-color: #bea2f3;
-    border: 1px solid #bea2f3;
+    background-color: #41b130;
+    border: 1px solid #41b130;
     cursor: auto;
   }
 }

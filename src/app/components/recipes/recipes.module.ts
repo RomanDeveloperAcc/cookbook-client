@@ -8,7 +8,7 @@ import { RecipesService } from '../../services/recipes/recipes.service';
 import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReadMorePipe } from '../../pipes/read-more.pipe';
-import { RecipeItemPageComponent } from './recipe-item-page/recipe-item-page.component';
+import { RecipesSingleViewComponent } from './recipes-single-view/recipes-single-view.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { RecipeItemPageComponent } from './recipe-item-page/recipe-item-page.com
     RecipesListComponent,
     CreateRecipeComponent,
     ReadMorePipe,
-    RecipeItemPageComponent
+    RecipesSingleViewComponent
   ],
   imports: [
     CommonModule,
@@ -32,7 +32,7 @@ import { RecipeItemPageComponent } from './recipe-item-page/recipe-item-page.com
     RecipesListComponent,
     CreateRecipeComponent,
     ReadMorePipe,
-    RecipeItemPageComponent
+    RecipesSingleViewComponent
   ]
 })
 export class RecipesModule {}

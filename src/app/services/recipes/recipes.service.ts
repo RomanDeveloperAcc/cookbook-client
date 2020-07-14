@@ -10,6 +10,7 @@ import { RecipeDto } from '../../models/recipes/recipe.dto';
 })
 export class RecipesService {
   private backEndUrl = environment.backendLink;
+  public tempRecipeItem: RecipeModel;
   public updateData: RecipeDto;
   public tempRecipeId: number;
   constructor(private http: HttpClient) { }
