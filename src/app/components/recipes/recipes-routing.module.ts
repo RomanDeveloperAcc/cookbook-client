@@ -15,12 +15,12 @@ const recipesRoutes: Routes = [
         component: RecipesListComponent
       },
       {
-        path: ':id',
-        component: RecipesItemComponent
-      },
-      {
         path: 'create-recipe',
         component: CreateRecipeComponent
+      },
+      {
+        path: ':id',
+        component: RecipesItemComponent
       },
       {
         path: '',

@@ -6,24 +6,30 @@ import { RecipesComponent } from './recipes.component';
 import { RecipesRoutingModule } from './recipes-routing.module';
 import { RecipesService } from '../../services/recipes/recipes.service';
 import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {ReadMorePipe} from "../../pipes/read-more.pipe";
 
 @NgModule({
   declarations: [
     RecipesComponent,
     RecipesItemComponent,
     RecipesListComponent,
-    CreateRecipeComponent
+    CreateRecipeComponent,
+    ReadMorePipe
   ],
   imports: [
     CommonModule,
-    RecipesRoutingModule
+    RecipesRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [RecipesService],
   exports: [
     RecipesComponent,
     RecipesItemComponent,
     RecipesListComponent,
-    CreateRecipeComponent
+    CreateRecipeComponent,
+    ReadMorePipe
   ]
 })
 export class RecipesModule {}

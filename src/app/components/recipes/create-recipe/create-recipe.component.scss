@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+$main-font: 'Open Sans';
+
+.main-wrapper {
+  margin: 1rem 20rem;
+  font-family: $main-font;
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    .text-input, .title-input {
+      margin-bottom: 2rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      border: 1px solid #180739;
+      border-radius: 5px;
+      font-family: $main-font;
+    }
+
+    .input-label {
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+    }
+
+    .text-input {
+      resize: none;
+      height: 14rem;
+    }
+  }
+}

@@ -1,3 +1,24 @@
 <div class="main-wrapper">
-  Hello
+  <form [formGroup]="createRecipeForm"
+        (ngSubmit)="onSubmit()"
+  >
+    <label class="input-label">
+      Title
+    </label>
+    <input type="text"
+           class="title-input"
+           placeholder="Enter the title here"
+           formControlName="title"
+    >
+    <label class="input-label">Description</label>
+    <textarea class="text-input"
+              placeholder="Enter the description here"
+              formControlName="text"
+    ></textarea>
+    <button class="cta-btn"
+            [disabled]="!createRecipeForm.valid"
+    >
+      Create recipe
+    </button>
+  </form>
 </div>

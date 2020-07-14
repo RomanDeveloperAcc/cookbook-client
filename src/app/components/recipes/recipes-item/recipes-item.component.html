@@ -5,7 +5,7 @@
     {{ recipeItem.title }}
   </div>
   <div class="recipe-text">
-    {{ recipeItem.description }}
+    {{ recipeItem.description | readMore}}
   </div>
   <div class="recipe-date">
     {{ recipeItem.creationDate | date }}

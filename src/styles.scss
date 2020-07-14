@@ -9,3 +9,26 @@ h2 {
 .active-link {
   color: #ffe200;
 }
+
+.cta-btn {
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  color: #fff;
+  background-color: #5211d1;
+  width: 100%;
+  border: 1px solid #5211d1;
+  border-radius: 2rem;
+  outline: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #6221de;
+  }
+
+  &:disabled {
+    background-color: #bea2f3;
+    border: 1px solid #bea2f3;
+    cursor: auto;
+  }
+}
