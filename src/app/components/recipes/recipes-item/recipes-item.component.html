@@ -2,7 +2,7 @@
      [class.at-home]="home"
 >
   <div class="recipe-title">
-    {{ recipeItem.title }}
+    {{ recipeItem.title | readMore }}
   </div>
   <div class="recipe-text">
     {{ recipeItem.description | readMore}}

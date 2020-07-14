@@ -13,6 +13,7 @@ $main-font: 'Open Sans';
     color: #180739;
     font-size: 1.75rem;
     margin-bottom: 2rem;
+    word-break: break-word;
   }
 
   .recipe-text {
@@ -26,4 +27,8 @@ $main-font: 'Open Sans';
 .at-home {
   width: 15rem;
   height: 20rem;
+
+  .recipe-date {
+    display: none;
+  }
 }
