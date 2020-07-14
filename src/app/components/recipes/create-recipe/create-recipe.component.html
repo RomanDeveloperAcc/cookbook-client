@@ -9,14 +9,17 @@
            class="title-input"
            placeholder="Enter the title here"
            formControlName="title"
+           #title
     >
     <label class="input-label">Description</label>
     <textarea class="text-input"
               placeholder="Enter the description here"
               formControlName="text"
+              #text
     ></textarea>
     <button class="cta-btn"
             [disabled]="!createRecipeForm.valid"
+            #ctaBtn
     >
       Create recipe
     </button>

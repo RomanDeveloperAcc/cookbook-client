@@ -13,7 +13,16 @@
     </div>
   </div>
   <div class="btn-content">
-    <button class="update-btn cta-btn">Update</button>
-    <button class="delete-btn cta-btn">Delete</button>
+    <button class="update-btn cta-btn"
+            (click)="updateItem(recipeItem.title, recipeItem.description, recipeItem.recipeId)"
+            [routerLink]="['create-recipe']"
+    >
+      Update
+    </button>
+    <button class="delete-btn cta-btn"
+            (click)="removeRecipe(recipeItem.recipeId)"
+    >
+      Delete
+    </button>
   </div>
 </div>
