@@ -1,6 +1,10 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CreateRecipeComponent } from './create-recipe.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RecipesService } from '../../../services/recipes/recipes.service';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('CreateRecipeComponent', () => {
   let component: CreateRecipeComponent;
@@ -8,7 +12,14 @@ describe('CreateRecipeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateRecipeComponent ]
+      declarations: [ CreateRecipeComponent ],
+      imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        HttpClientTestingModule,
+        RouterTestingModule.withRoutes([])]
+      ,
+      providers: [RecipesService]
     })
     .compileComponents();
   }));

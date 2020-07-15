@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RecipesSingleViewComponent } from './recipes-single-view.component';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RecipesService } from '../../../services/recipes/recipes.service';
 
 describe('RecipesSingleViewComponent', () => {
   let component: RecipesSingleViewComponent;
@@ -8,7 +10,9 @@ describe('RecipesSingleViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RecipesSingleViewComponent ]
+      declarations: [ RecipesSingleViewComponent ],
+      imports: [HttpClientTestingModule],
+      providers: [RecipesService]
     })
     .compileComponents();
   }));
