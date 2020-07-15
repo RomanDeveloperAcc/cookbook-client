@@ -1,16 +1,20 @@
 <div class="main-wrapper">
   <div class="text-content">
     <div class="recipe-title">
-      {{ recipeItem.title | readMore }}
+      {{ recipeItem.title }}
     </div>
     <div class="recipe-text">
-      {{ recipeItem.description | readMore}}
+      {{ recipeItem.description }}
     </div>
     <div class="recipe-date">
       {{ recipeItem.creationDate | date }}
     </div>
   </div>
-
+  <div class="history-title"
+       *ngIf="recipes[0]"
+  >
+    History:
+  </div>
   <app-recipes-item *ngFor="let recipe of recipes"
                     [recipeItem]="recipe"
                     [history]="true"

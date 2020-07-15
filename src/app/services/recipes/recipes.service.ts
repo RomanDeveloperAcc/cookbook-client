@@ -32,6 +32,7 @@ export class RecipesService {
       title: form.value.title,
       description: form.value.text
     };
+
     return this.http.post<RecipeModel>(`${this.backEndUrl}/recipes`, data);
   }
 
@@ -41,6 +42,7 @@ export class RecipesService {
       title: form.value.title,
       description: form.value.text
     };
+
     return this.http.post<object>(`${this.backEndUrl}/history`, data);
   }
 

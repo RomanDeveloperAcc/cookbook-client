@@ -27,7 +27,7 @@ export class CreateRecipeComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.recipesService.updateData ?
-      this.type = 'update' : this.type = 'comment';
+      this.type = 'update' : this.type = 'create';
   }
 
   ngAfterViewInit(): void {
@@ -48,11 +48,25 @@ export class CreateRecipeComponent implements OnInit, AfterViewInit {
   public onSubmit(): void {
     if (this.type === 'create') {
       this.recipesService.postRecipe(this.createRecipeForm)
-        .subscribe(data => data.title ? this.router.navigate(['/recipes']) : console.log(data));
+        .subscribe(data => {
+          if (data.title) {
+            this.sendHistoryRecipes(data.recipeId);
+            this.router.navigate(['/recipes']);
+          }
+        });
     } else {
       this.recipesService.putRecipe(this.createRecipeForm)
-        .subscribe(data => data.title ? this.router.navigate(['/recipes']) : console.log(data));
-
+        .subscribe(data => {
+          if (data.title) {
+            this.sendHistoryRecipes(data.recipeId);
+            this.router.navigate(['/recipes']);
+          }
+        });
     }
+  }
+
+  private sendHistoryRecipes(id: number): void {
+    this.recipesService.postHistoryRecipe(this.createRecipeForm, id)
+      .subscribe();
   }
 }
