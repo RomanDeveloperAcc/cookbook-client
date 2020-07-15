@@ -7,6 +7,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { ReadMorePipe } from '../../../pipes/read-more.pipe';
 
 describe('RecipesItemComponent', () => {
+  let recipesService: RecipesService;
   let component: RecipesItemComponent;
   let fixture: ComponentFixture<RecipesItemComponent>;
 
@@ -29,10 +30,11 @@ describe('RecipesItemComponent', () => {
     fixture = TestBed.createComponent(RecipesItemComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    recipesService = TestBed.get(RecipesService);
   });
 
   it('should create', () => {
-    const readMore = new ReadMorePipe();
+    fixture.detectChanges();
     expect(component).toBeTruthy();
   });
 });
