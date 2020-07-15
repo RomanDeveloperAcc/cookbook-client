@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+$main-font: 'Montserrat';
+
 body {
   margin: 0;
 }
@@ -30,4 +34,14 @@ h2 {
     border: 1px solid #41b130;
     cursor: auto;
   }
+}
+
+.mat-menu-content {
+  background-color: #fff;
+  border: 2px solid #5211d1;
+}
+
+.mat-menu-item {
+  color: #5211d1;
+  font-family: $main-font;
 }

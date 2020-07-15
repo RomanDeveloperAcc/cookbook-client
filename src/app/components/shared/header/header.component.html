@@ -26,6 +26,24 @@
              [routerLinkActiveOptions]="{ exact: true }">
           About
         </div>
+        <button mat-icon-button
+                [matMenuTriggerFor]="menu"
+                class="burger-btn"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item
+                  [routerLink]="['/recipes']"
+          >
+            Recipes
+          </button>
+          <button mat-menu-item
+                  [routerLink]="['/about']"
+          >
+            About
+          </button>
+        </mat-menu>
       </nav>
     </div>
   </div>

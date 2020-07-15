@@ -1,4 +1,12 @@
 <div class="main-wrapper">
+  <div class="text-info">
+    <div class="text-info-title">
+      {{ action }} recipe
+    </div>
+    <div class="text-info-subtitle">
+      This is the page where you may create or update the recipes.
+    </div>
+  </div>
   <form [formGroup]="createRecipeForm"
         (ngSubmit)="onSubmit()"
   >

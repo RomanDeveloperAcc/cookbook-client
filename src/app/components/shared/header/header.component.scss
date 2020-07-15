@@ -13,7 +13,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 6rem;
+  padding: 0 6%;
   font-family: $main-font;
   background-color: #5211d1;
   color: #fff;
@@ -43,5 +43,32 @@ header {
     margin-left: 5rem;
     outline: none;
     cursor: pointer;
+  }
+
+  .burger-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    display: none;
+
+    &:hover {
+      background-color: #5b13e7;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav-items {
+    .nav-item {
+      display: none;
+    }
+
+    .burger-btn {
+      display: block;
+    }
   }
 }

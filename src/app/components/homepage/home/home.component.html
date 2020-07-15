@@ -7,18 +7,18 @@
       Check out our recipes:
     </div>
   </div>
-  <div class="recipes-content">
-    <div class="three-last-recipes"
-         *ngIf="newRecipes[0]"
-    >
-      <app-recipes-item *ngFor="let recipe of newRecipes"
-                        [recipeItem]="recipe"
-                        [home]="true"
-      ></app-recipes-item>
-    </div>
-    <div class="no-recipes-text"
-         *ngIf="!newRecipes[0]"
-    >
+  <div class="three-last-recipes"
+       *ngIf="newRecipes[0]"
+  >
+    <app-recipes-item *ngFor="let recipe of newRecipes"
+                      [recipeItem]="recipe"
+                      [home]="true"
+    ></app-recipes-item>
+  </div>
+  <div class="recipes-content"
+       *ngIf="!newRecipes[0]"
+  >
+    <div class="no-recipes-text">
       Sorry, there are no recipes :(
     </div>
   </div>

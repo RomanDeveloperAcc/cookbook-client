@@ -12,16 +12,19 @@ export class RecipesSingleViewComponent implements OnInit {
   public recipeItem;
   public recipes = [];
   private recipeId: number;
-  private historyItem = false;
+  public historyItem = false;
   constructor(private recipesService: RecipesService,
               private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
     this.recipeId = this.route.snapshot.params.id;
+    console.log(this.recipesService.historyItem)
     this.getRecipeitem();
+    if (!this.recipesService.historyItem) {
+      this.getHistoryRecipes();
+    }
     this.recipesService.setHistoryItem(false);
-    this.getHistoryRecipes();
   }
 
   private getRecipeitem(): void {

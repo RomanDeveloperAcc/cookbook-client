@@ -4,7 +4,7 @@ $main-font: 'Montserrat';
 
 .main-wrapper {
   font-family: $main-font;
-  margin: 3rem 20rem;
+  margin: 3rem 20%;
 
   .text-right {
     text-align: right;
@@ -38,6 +38,55 @@ $main-font: 'Montserrat';
       .info-text-subtitle {
         opacity: 0.7;
         font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main-wrapper {
+    margin: 3rem 10%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .main-wrapper {
+    .info-element {
+
+      .pizza-img {
+        heigth: 7.5rem;
+        width: 10rem;
+      }
+
+      .food-img {
+        height: 7.5rem;
+        width: 7.5rem;
+      }
+
+      .info-element-text {
+        .info-text-title {
+          font-size: 1.25rem;
+        }
+
+        .info-text-subtitle {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .main-wrapper {
+    .info-element {
+      display: block;
+
+      .pizza-img,.food-img {
+        display: none;
+      }
+
+      .info-element-text {
+        width: 100%;
       }
     }
   }

@@ -40,7 +40,7 @@ export class RecipesItemComponent implements OnInit {
 
   public goToSingleView(): void {
     if (this.history) {
-      this.recipesService.setHistoryItem();
+      this.recipesService.setHistoryItem(true);
       this.router.navigate([`/recipes/history/${this.recipeItem.recipeId}`]);
     } else {
       this.router.navigate([`/recipes/${this.recipeItem.recipeId}`]);

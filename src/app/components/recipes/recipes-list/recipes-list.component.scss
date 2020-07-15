@@ -1,5 +1,5 @@
 .main-wrapper {
-  margin: 0 25rem;
+  margin: 0 25%;
 
   .empty-block {
     height: 40rem
@@ -7,5 +7,11 @@
 
   .cta-btn {
     margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .main-wrapper {
+    margin: 0 10%;
   }
 }

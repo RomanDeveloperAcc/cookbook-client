@@ -3,8 +3,20 @@
 $main-font: 'Open Sans';
 
 .main-wrapper {
-  margin: 1rem 20rem;
+  margin: 1rem 20%;
   font-family: $main-font;
+
+  .text-info {
+    .text-info-title {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .text-info-subtitle {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
 
   form {
     display: flex;
@@ -33,5 +45,11 @@ $main-font: 'Open Sans';
     .cta-btn {
       margin-bottom: 2rem;
     }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-wrapper {
+    margin: 1rem 5%;
   }
 }

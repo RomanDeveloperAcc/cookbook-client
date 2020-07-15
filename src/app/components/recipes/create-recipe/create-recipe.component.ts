@@ -20,6 +20,7 @@ export class CreateRecipeComponent implements OnInit, AfterViewInit {
     text: ['', Validators.required]
   });
   private type = 'create';
+  public action = 'Create';
 
   constructor(private fb: FormBuilder,
               private recipesService: RecipesService,
@@ -27,7 +28,8 @@ export class CreateRecipeComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
     this.recipesService.updateData ?
-      this.type = 'update' : this.type = 'create';
+      [this.type, this.action] = ['update', 'Update'] :
+      [this.type, this.action] = ['create', 'Create'];
   }
 
   ngAfterViewInit(): void {

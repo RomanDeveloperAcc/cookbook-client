@@ -69,3 +69,29 @@ $main-font: 'Open Sans';
     display: none;
   }
 }
+
+@media screen and (max-width: 720px) {
+  .main-wrapper {
+    display: block;
+
+    .btn-content {
+      flex-direction: row;
+
+      .update-btn {
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-wrapper {
+    .btn-content {
+      flex-direction: column;
+
+      .update-btn {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

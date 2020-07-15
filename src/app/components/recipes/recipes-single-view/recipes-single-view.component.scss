@@ -3,7 +3,7 @@
 $main-font: 'Open Sans';
 
 .main-wrapper {
-  margin: 2rem 20rem;
+  margin: 2rem 20%;
   font-family: $main-font;
 
   .recipe-text,
@@ -32,5 +32,27 @@ $main-font: 'Open Sans';
     font-size: 1.5rem;
     opacity: 0.7;
     margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .main-wrapper {
+    margin: 2rem 10%;
+
+    .recipe-title {
+      font-size: 1.75rem;
+    }
+
+    .recipe-text {
+      font-size: 1.5rem;
+    }
+
+    .history-title {
+      font-size: 1.25rem;
+    }
+
+    .recipe-date {
+      font-size: 1rem;
+    }
   }
 }
