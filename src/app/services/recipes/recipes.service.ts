@@ -10,9 +10,9 @@ import { RecipeDto } from '../../models/recipes/recipe.dto';
 })
 export class RecipesService {
   private backEndUrl = environment.backendLink;
-  public tempRecipeItem: RecipeModel;
   public updateData: RecipeDto;
   public tempRecipeId: number;
+  public historyItem = false;
   constructor(private http: HttpClient) { }
 
   public setUpdateData(obj: RecipeDto): void {
@@ -23,12 +23,25 @@ export class RecipesService {
     this.tempRecipeId = id;
   }
 
+  public setHistoryItem(value = true): void {
+    this.historyItem = value;
+  }
+
   public postRecipe(form): Observable<RecipeModel> {
     const data: RecipeDto = {
       title: form.value.title,
       description: form.value.text
     };
     return this.http.post<RecipeModel>(`${this.backEndUrl}/recipes`, data);
+  }
+
+  public postHistoryRecipe(form, id): Observable<object> {
+    const data = {
+      parentId: id,
+      title: form.value.title,
+      description: form.value.text
+    };
+    return this.http.post<object>(`${this.backEndUrl}/history`, data);
   }
 
   public getRecipes(): Observable<RecipeModel[]> {
@@ -39,8 +52,16 @@ export class RecipesService {
     return this.http.get<RecipeModel[]>(`${this.backEndUrl}/recipes/new`);
   }
 
+  public getHistoryRecipes(id: number): Observable<object[]> {
+    return this.http.get<object[]>(`${this.backEndUrl}/history/${id}`);
+  }
+
   public getOneRecipe(id: number): Observable<RecipeModel> {
     return this.http.get<RecipeModel>(`${this.backEndUrl}/recipes/${id}`);
+  }
+
+  public getOneHistoryRecipe(id: number): Observable<object> {
+    return this.http.get<object>(`${this.backEndUrl}/history/item/${id}`);
   }
 
   public putRecipe(form): Observable<RecipeModel> {

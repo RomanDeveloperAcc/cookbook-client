@@ -63,3 +63,9 @@ $main-font: 'Open Sans';
     display: none;
   }
 }
+
+.history-item {
+  .recipe-date, .btn-content {
+    display: none;
+  }
+}

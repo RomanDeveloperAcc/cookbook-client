@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class RecipesItemComponent implements OnInit {
   @Input() public recipeItem: RecipeModel;
   @Input() public home = false;
+  @Input() public history = false;
 
   constructor(private recipesService: RecipesService,
               private router: Router) { }
@@ -25,6 +26,7 @@ export class RecipesItemComponent implements OnInit {
     };
     this.recipesService.setUpdateData(tempObject);
     this.recipesService.setUpdateId(id);
+    this.recipesService.setHistoryItem(false);
   }
 
   public removeRecipe(id: number): void {
@@ -37,6 +39,11 @@ export class RecipesItemComponent implements OnInit {
   }
 
   public goToSingleView(): void {
-    this.router.navigate([`/recipes/${this.recipeItem.recipeId}`]);
+    if (this.history) {
+      this.recipesService.setHistoryItem();
+      this.router.navigate([`/recipes/history/${this.recipeItem.recipeId}`]);
+    } else {
+      this.router.navigate([`/recipes/${this.recipeItem.recipeId}`]);
+    }
   }
 }

@@ -10,4 +10,9 @@
       {{ recipeItem.creationDate | date }}
     </div>
   </div>
+
+  <app-recipes-item *ngFor="let recipe of recipes"
+                    [recipeItem]="recipe"
+                    [history]="true"
+  ></app-recipes-item>
 </div>

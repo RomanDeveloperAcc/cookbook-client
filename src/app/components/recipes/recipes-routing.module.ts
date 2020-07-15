@@ -24,6 +24,10 @@ const recipesRoutes: Routes = [
         component: RecipesSingleViewComponent
       },
       {
+        path: 'history/:id',
+        component: RecipesSingleViewComponent
+      },
+      {
         path: '',
         redirectTo: 'recipes',
         pathMatch: 'full'

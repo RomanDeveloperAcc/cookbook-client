@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {RecipesService} from "../../../services/recipes/recipes.service";
-import {RecipeModel} from "../../../models/recipes/recipe.model";
+import { RecipesService } from '../../../services/recipes/recipes.service';
+import { RecipeModel } from '../../../models/recipes/recipe.model';
 
 @Component({
   selector: 'app-recipes-list',
