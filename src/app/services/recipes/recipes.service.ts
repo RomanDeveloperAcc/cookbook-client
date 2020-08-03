@@ -9,11 +9,17 @@ import { RecipeDto } from '../../models/recipes/recipe.dto';
   providedIn: 'root'
 })
 export class RecipesService {
-  private backEndUrl = environment.backendLink;
   public updateData: RecipeDto;
   public tempRecipeId: number;
   public historyItem = false;
+  public recipeId: number;
+  private backEndUrl = environment.backendLink;
+
   constructor(private http: HttpClient) { }
+
+  public setRecipeId(id: number): void {
+    this.recipeId = id;
+  }
 
   public setUpdateData(obj: RecipeDto): void {
     this.updateData = obj;

@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { RecipesService } from '../../../services/recipes/recipes.service';
 import { RecipeModel } from '../../../models/recipes/recipe.model';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
+import { CancelPopupComponent } from '../../shared/cancel-popup/cancel-popup.component';
 
 @Component({
   selector: 'app-recipes-item',
@@ -14,7 +16,8 @@ export class RecipesItemComponent implements OnInit {
   @Input() public history = false;
 
   constructor(private recipesService: RecipesService,
-              private router: Router) { }
+              private router: Router,
+              private dialogRef: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -29,13 +32,11 @@ export class RecipesItemComponent implements OnInit {
     this.recipesService.setHistoryItem(false);
   }
 
-  public removeRecipe(id: number): void {
-    this.recipesService.deleteRecipe(id)
-      .subscribe(() => {
-        this.router.routeReuseStrategy.shouldReuseRoute = () => false;
-        this.router.onSameUrlNavigation = 'reload';
-        this.router.navigate(['/recipes']);
-      });
+  public openDialogWindow(): void {
+    this.dialogRef.open(CancelPopupComponent, {
+      width: '30%',
+    });
+    this.recipesService.setRecipeId(this.recipeItem.recipeId);
   }
 
   public goToSingleView(): void {

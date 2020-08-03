@@ -30,6 +30,7 @@ export class CreateRecipeComponent implements OnInit, AfterViewInit {
     this.recipesService.updateData ?
       [this.type, this.action] = ['update', 'Update'] :
       [this.type, this.action] = ['create', 'Create'];
+    this.title.nativeElement.focus();
   }
 
   ngAfterViewInit(): void {

@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { CancelPopupComponent } from './components/shared/cancel-popup/cancel-popup.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MatIconModule } from '@angular/material/icon';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    AboutComponent
+    AboutComponent,
+    CancelPopupComponent
   ],
   imports: [
     BrowserModule,
