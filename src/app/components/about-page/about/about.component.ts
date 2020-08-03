@@ -11,6 +11,7 @@ export class AboutComponent implements OnInit {
     food: 'assets/img/about-page/food.jpg',
     healthy: 'assets/img/about-page/healthy.jpg'
   };
+
   constructor() { }
 
   ngOnInit(): void {

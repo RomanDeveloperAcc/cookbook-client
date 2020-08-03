@@ -9,6 +9,7 @@ import { CreateRecipeComponent } from './create-recipe/create-recipe.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ReadMorePipe } from '../../pipes/read-more.pipe';
 import { RecipesSingleViewComponent } from './recipes-single-view/recipes-single-view.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { RecipesSingleViewComponent } from './recipes-single-view/recipes-single
     CommonModule,
     RecipesRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule
   ],
   providers: [RecipesService],
   exports: [

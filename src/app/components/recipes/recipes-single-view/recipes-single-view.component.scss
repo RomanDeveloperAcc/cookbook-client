@@ -2,6 +2,13 @@
 
 $main-font: 'Open Sans';
 
+.loader-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0;
+}
+
 .main-wrapper {
   margin: 2rem 20%;
   font-family: $main-font;

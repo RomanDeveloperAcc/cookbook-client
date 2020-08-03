@@ -18,14 +18,14 @@ export class RecipesSingleViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.recipeId = this.route.snapshot.params.id;
-    this.getRecipeitem();
+    this.getRecipeItem();
     if (!this.recipesService.historyItem) {
       this.getHistoryRecipes();
     }
     this.recipesService.setHistoryItem(false);
   }
 
-  private getRecipeitem(): void {
+  private getRecipeItem(): void {
     if (this.recipesService.historyItem) {
       this.recipesService.getOneHistoryRecipe(this.recipeId)
         .subscribe(data => this.recipeItem = data);

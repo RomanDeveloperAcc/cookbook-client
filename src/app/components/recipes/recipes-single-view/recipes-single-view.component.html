@@ -1,4 +1,17 @@
-<div class="main-wrapper">
+<div class="loader-wrapper"
+     *ngIf="!recipeItem">
+  <div class="loader">
+    <mat-progress-spinner
+      class="example-margin"
+      [color]="'primary'"
+      [mode]="'indeterminate'"
+      [value]="50">
+    </mat-progress-spinner>
+  </div>
+</div>
+<div class="main-wrapper"
+     *ngIf="recipeItem"
+>
   <div class="text-content">
     <div class="recipe-title">
       {{ recipeItem.title }}
