@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
-$main-font: 'Montserrat';
+$main-font: 'Roboto';
 
 body {
   margin: 0;
@@ -45,3 +45,5 @@ h2 {
   color: #5211d1;
   font-family: $main-font;
 }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

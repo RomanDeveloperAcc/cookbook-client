@@ -6,7 +6,9 @@
   </button>
   <div class="empty-block"
        *ngIf="!recipes[0]"
-  ></div>
+  >
+    There are no recipes. Try to create one
+  </div>
   <app-recipes-item *ngFor="let recipe of recipes"
                     [recipeItem]="recipe"
   ></app-recipes-item>

@@ -3,23 +3,5 @@
     <div class="main-text-title">
       <h1>Welcome!</h1>
     </div>
-    <div class="main-text-subtitle">
-      Check out our recipes:
-    </div>
-  </div>
-  <div class="three-last-recipes"
-       *ngIf="newRecipes[0]"
-  >
-    <app-recipes-item *ngFor="let recipe of newRecipes"
-                      [recipeItem]="recipe"
-                      [home]="true"
-    ></app-recipes-item>
-  </div>
-  <div class="recipes-content"
-       *ngIf="!newRecipes[0]"
-  >
-    <div class="no-recipes-text">
-      Sorry, there are no recipes :(
-    </div>
   </div>
 </div>

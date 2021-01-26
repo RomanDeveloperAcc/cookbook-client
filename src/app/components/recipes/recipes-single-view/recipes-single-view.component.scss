@@ -20,6 +20,7 @@ $main-font: 'Open Sans';
     word-break: break-word;
     margin-bottom: 1.5rem;
     text-align: center;
+    white-space: pre-line;
   }
 
   .recipe-title {
@@ -27,7 +28,7 @@ $main-font: 'Open Sans';
   }
 
   .recipe-text {
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: left;
   }
 

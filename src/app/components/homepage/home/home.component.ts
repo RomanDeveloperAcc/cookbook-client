@@ -8,16 +8,10 @@ import { RecipesService } from '../../../services/recipes/recipes.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public newRecipes: RecipeModel[] = [];
 
   constructor(private recipesService: RecipesService) { }
 
   ngOnInit(): void {
-    this.getNewRecipes();
-  }
 
-  private getNewRecipes(): void {
-    this.recipesService.getNewestRecipes()
-      .subscribe(data => this.newRecipes = data);
   }
 }

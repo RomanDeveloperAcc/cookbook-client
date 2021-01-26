@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "cookbook-client"
+  "defaultProject": "cookbook-client",
+  "cli": {
+    "defaultCollection": "@ngrx/schematics"
+  }
 }

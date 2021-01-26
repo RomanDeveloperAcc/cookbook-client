@@ -1,0 +1,37 @@
+<div class="sign-in">
+  <div class="sign-in__form">
+    <div class="sign-in__heading">
+      <h2>Sign In</h2>
+    </div>
+    <form [formGroup]="form" class="sign-in__form__content">
+      <div class="sign-in__form__content-input">
+        <mat-form-field>
+          <input type="email"
+                 id="email"
+                 matInput
+                 formControlName="email"
+                 placeholder="Email"
+          >
+        </mat-form-field>
+        <mat-form-field>
+          <input type="password"
+                 id="password"
+                 matInput
+                 formControlName="password"
+                 placeholder="Password"
+          >
+        </mat-form-field>
+      </div>
+      <div class="sign-in__form__content-submit">
+        <button mat-raised-button
+                color="primary"
+                type="submit"
+                [disabled]="!form.valid"
+                (click)="signIn()"
+        >
+          Sign In
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

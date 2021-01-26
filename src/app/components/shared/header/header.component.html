@@ -11,7 +11,7 @@
       >
       <h1 class="main-title">CookBook</h1>
     </div>
-    <div class="nav">
+    <div class="nav" *ngIf="isAuthorized">
       <nav class="nav-items">
         <div class="nav-item"
              [routerLink]="['/recipes']"
@@ -25,6 +25,13 @@
              routerLinkActive="active-link"
              [routerLinkActiveOptions]="{ exact: true }">
           About
+        </div>
+        <div class="nav-item">
+          <button mat-raised-button
+                  (click)="onSignOut()"
+          >
+            Sign Out
+          </button>
         </div>
         <button mat-icon-button
                 [matMenuTriggerFor]="menu"
@@ -43,8 +50,17 @@
           >
             About
           </button>
+          <button mat-menu-item
+                  (click)="onSignOut()"
+          >
+            Sign Out
+          </button>
         </mat-menu>
       </nav>
+    </div>
+    <div class="header__auth" *ngIf="!isAuthorized">
+      <button mat-raised-button (click)="openSignIn()">Sign In</button>
+      <button mat-raised-button (click)="openSignUp()">Sign Up</button>
     </div>
   </div>
 </header>

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipesService } from '../../../services/recipes/recipes.service';
 import { ActivatedRoute } from '@angular/router';
+import { tap } from "rxjs/operators";
 
 @Component({
   selector: 'app-recipes-single-view',
@@ -27,18 +28,22 @@ export class RecipesSingleViewComponent implements OnInit {
 
   private getRecipeItem(): void {
     if (this.recipesService.historyItem) {
-      this.recipesService.getOneHistoryRecipe(this.recipeId)
-        .subscribe(data => this.recipeItem = data);
+      this.recipesService.getOneHistoryRecipe(this.recipeId).pipe(
+        tap((data) => this.recipeItem = data)
+      ).subscribe();
     } else {
-      this.recipesService.getOneRecipe(this.recipeId)
-        .subscribe(data => this.recipeItem = data);
+      this.recipesService.getOneRecipe(this.recipeId).pipe(
+        tap((data) => this.recipeItem = data)
+      )
+        .subscribe();
     }
   }
 
   private getHistoryRecipes(): void {
     if (!this.historyItem) {
-      this.recipesService.getHistoryRecipes(this.recipeId)
-        .subscribe(data => this.recipes = data);
+      this.recipesService.getHistoryRecipes(this.recipeId).pipe(
+        tap((data) => this.recipes = data)
+      ).subscribe();
     }
   }
 }
