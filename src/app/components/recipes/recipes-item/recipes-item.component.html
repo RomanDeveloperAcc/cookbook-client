@@ -5,24 +5,24 @@
 >
   <div class="text-content">
     <div class="recipe-title">
-      {{ recipeItem.title | readMore }}
+      {{ recipeItem?.title | readMore }}
     </div>
     <div class="recipe-text">
-      {{ recipeItem.description | readMore}}
+      {{ recipeItem?.description | readMore}}
     </div>
     <div class="recipe-date">
-      {{ recipeItem.creationDate | date: 'medium' }}
+      {{ recipeItem?.creationDate | date: 'medium' }}
     </div>
   </div>
   <div class="btn-content">
     <button class="update-btn cta-btn"
-            (click)="updateItem(recipeItem.title, recipeItem.description, recipeItem.recipeId)"
+            (click)="updateItem(recipeItem?.title, recipeItem?.description, recipeItem?.recipeId)"
             [routerLink]="['create-recipe']"
     >
       Update
     </button>
     <button class="delete-btn cta-btn"
-            (click)="openDialogWindow()"
+            (click)="openDialogWindow($event)"
     >
       Delete
     </button>

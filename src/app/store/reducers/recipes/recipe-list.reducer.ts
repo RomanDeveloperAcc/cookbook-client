@@ -20,7 +20,7 @@ export const reducer = createReducer(
   initialState,
   on(RecipesActions.GetRecipeListAction, state => state),
   on(RecipesActions.GetRecipeListActionSuccess, (state: RecipeState, { data}) => {
-    return { ...state, recipes: data }
+    return { ...state, recipes: [...data] }
   }),
   on(RecipesActions.GetRecipeListActionFailure, (state: RecipeState, {error}) => {
     return { ...state, error: error }

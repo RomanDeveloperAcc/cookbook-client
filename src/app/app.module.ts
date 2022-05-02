@@ -17,6 +17,7 @@ import { environment } from "../environments/environment";
 import { RecipeReducer } from "./store/reducers/recipes/recipe-list.reducer";
 import { EffectsModule } from "@ngrx/effects";
 import { RecipeListEffects } from "./store/effects/recipes/recipe-list.effects";
+import { CreateRecipeEffects } from "./store/effects/recipes/create-recipe.effects";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { RecipeListEffects } from "./store/effects/recipes/recipe-list.effects";
     AboutPageModule,
     AuthModule,
     StoreModule.forRoot({ recipes: RecipeReducer }, {}),
-    EffectsModule.forRoot([RecipeListEffects]),
+    EffectsModule.forRoot([RecipeListEffects, CreateRecipeEffects]),
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
       logOnly: environment.production, // Restrict extension to log-only mode

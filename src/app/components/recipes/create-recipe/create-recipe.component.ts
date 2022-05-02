@@ -2,6 +2,11 @@ import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angula
 import { FormBuilder, Validators } from '@angular/forms';
 import { RecipesService } from '../../../services/recipes/recipes.service';
 import { Router } from '@angular/router';
+import { Store } from "@ngrx/store";
+import { RecipeState } from "../../../store/reducers/recipes/recipe-list.reducer";
+import { State } from "../../../test.reducer";
+import * as CreateRecipeActions from '../../../store/actions/recipes/create-recipe.actions';
+import { RecipeModel } from "../../../models/recipes/recipe.model";
 
 @Component({
   selector: 'app-create-recipe',
@@ -24,7 +29,8 @@ export class CreateRecipeComponent implements OnInit, AfterViewInit {
 
   constructor(private fb: FormBuilder,
               private recipesService: RecipesService,
-              private router: Router) { }
+              private router: Router,
+              private store: Store<{ recipes: State }>) { }
 
   ngOnInit(): void {
     this.recipesService.updateData ?
@@ -50,13 +56,18 @@ export class CreateRecipeComponent implements OnInit, AfterViewInit {
 
   public onSubmit(): void {
     if (this.type === 'create') {
-      this.recipesService.postRecipe(this.createRecipeForm)
-        .subscribe(data => {
-          if (data.title) {
-            this.sendHistoryRecipes(data.recipeId);
-            this.router.navigate(['/recipes']);
-          }
-        });
+      // this.recipesService.postRecipe(this.createRecipeForm)
+      //   .subscribe(data => {
+      //     if (data.title) {
+      //       this.sendHistoryRecipes(data.recipeId);
+      //       this.router.navigate(['/recipes']);
+      //     }
+      //   });
+      const data = {
+        title: this.createRecipeForm.get('title').value,
+        description: this.createRecipeForm.get('text').value
+      }
+      this.store.dispatch(CreateRecipeActions.CreateRecipe({data}));
     } else {
       this.recipesService.putRecipe(this.createRecipeForm)
         .subscribe(data => {

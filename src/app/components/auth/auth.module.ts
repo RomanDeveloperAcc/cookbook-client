@@ -8,7 +8,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from "@angular/material/input";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
-const AUTH_MAT_IMPORTS = [
+export const AUTH_MAT_IMPORTS = [
   MatButtonModule,
   MatFormFieldModule,
   MatInputModule
