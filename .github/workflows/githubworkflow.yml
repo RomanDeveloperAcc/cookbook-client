@@ -42,12 +42,12 @@ jobs:
 
       - name: Build
         run: |
-          npm run build -- --prod
+          npm run build
 
       - name: Lint
         run: |
-          npm run lint --prod
+          ng lint
 
       - name: Test
         run: |
-          npm run test -- --prod
+          ng test --watch=false --browsers=ChromeHeadless
