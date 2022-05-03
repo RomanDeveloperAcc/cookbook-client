@@ -12,6 +12,11 @@ import { RecipesSingleViewComponent } from './recipes-single-view/recipes-single
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatDialogModule } from '@angular/material/dialog';
 
+export const RECIPES_MAT_IMPORTS = [
+  MatProgressSpinnerModule,
+  MatDialogModule,
+];
+
 @NgModule({
   declarations: [
     RecipesComponent,
@@ -26,8 +31,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     RecipesRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatProgressSpinnerModule,
-    MatDialogModule
+    ...RECIPES_MAT_IMPORTS,
   ],
   providers: [RecipesService],
   exports: [

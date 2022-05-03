@@ -7,11 +7,13 @@ import { MatMenuModule } from "@angular/material/menu";
 import { MatIconModule } from "@angular/material/icon";
 import { RouterModule } from "@angular/router";
 import { MatButtonModule } from "@angular/material/button";
+import { MatDialogModule } from "@angular/material/dialog";
 
-const SHARED_MAT_IMPORTS = [
+export const SHARED_MAT_IMPORTS = [
   MatMenuModule,
   MatIconModule,
-  MatButtonModule
+  MatButtonModule,
+  MatDialogModule,
 ]
 
 @NgModule({

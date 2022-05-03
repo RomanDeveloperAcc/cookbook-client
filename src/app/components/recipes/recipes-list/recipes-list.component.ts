@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RecipesService } from '../../../services/recipes/recipes.service';
 import { RecipeModel } from '../../../models/recipes/recipe.model';
-import { tap } from "rxjs/operators";
+import { filter, tap } from "rxjs/operators";
 import { RecipeState } from "../../../store/reducers/recipes/recipe-list.reducer";
 import { select, Store } from "@ngrx/store";
 import { Observable } from "rxjs";
@@ -26,8 +26,9 @@ export class RecipesListComponent implements OnInit {
   ngOnInit(): void {
     //this.getAllRecipes();
     this.recipe$.pipe(
+      filter(data => !!data),
       tap((data) => {
-        this.recipes = [...data.recipes]
+        this.recipes = [...data?.recipes]
       })
     ).subscribe();
 

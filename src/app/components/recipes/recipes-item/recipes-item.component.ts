@@ -15,12 +15,13 @@ export class RecipesItemComponent implements OnInit {
   @Input() public home = false;
   @Input() public history = false;
 
-  constructor(private recipesService: RecipesService,
-              private router: Router,
-              private dialogRef: MatDialog) { }
+  constructor(
+    private recipesService: RecipesService,
+    private router: Router,
+    private dialogRef: MatDialog
+  ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   public updateItem(title: string, text: string, id: number): void {
     const tempObject = {
@@ -32,11 +33,12 @@ export class RecipesItemComponent implements OnInit {
     this.recipesService.setHistoryItem(false);
   }
 
-  public openDialogWindow(): void {
+  public openDialogWindow(e: Event): void {
+    e.stopPropagation();
     this.dialogRef.open(CancelPopupComponent, {
       width: '30%',
     });
-    this.recipesService.setRecipeId(this.recipeItem.recipeId);
+    this.recipesService.setRecipeId(this.recipeItem?.recipeId);
   }
 
   public goToSingleView(): void {

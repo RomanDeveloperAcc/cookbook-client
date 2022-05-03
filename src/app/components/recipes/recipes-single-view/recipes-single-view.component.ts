@@ -34,8 +34,7 @@ export class RecipesSingleViewComponent implements OnInit {
     } else {
       this.recipesService.getOneRecipe(this.recipeId).pipe(
         tap((data) => this.recipeItem = data)
-      )
-        .subscribe();
+      ).subscribe();
     }
   }
 
