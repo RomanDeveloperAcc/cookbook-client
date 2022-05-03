@@ -46,7 +46,7 @@ jobs:
 
       - name: Lint
         run: |
-          ng lint
+          npm run lint
 
       - name: Test
         run: |
